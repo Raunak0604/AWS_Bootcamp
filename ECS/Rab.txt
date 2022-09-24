@@ -1,0 +1,21 @@
+sudo docker pull nginx
+sudo docker images
+sudo docker run --name rab-nginx -d -p 8080:80 {ID}
+sudo docker ps
+hostname -I
+curl http://172.31.21.218:8080
+Sudo docker start {ID}
+Sudo docker stop {ID}
+sudo docker kill {ID}
+
+vim Dockerfile
+
+FROM nginx
+COPY index.html /usr/share/nginx/html
+
+sudo docker build -t web-rab .
+
+DOCKER HUB
+sudo docker tag web-rab:latest web-rab:latest-realease
+sudo docker login
+
